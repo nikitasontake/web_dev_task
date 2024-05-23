@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+   
+    background-size: 400% 400%;
+   
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: gradientAnimation 15s ease infinite;
+    background: linear-gradient(135deg, #ec4fec, #a1c0df);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.company-name {
+    background-color: #fabffa;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+header p {
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.team-section {
+    margin-bottom: 40px;
+}
+
+.team-header {
+    background-color: #a64ca6;
+    color: white;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    margin-left: 410px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #a64ca6;
+    padding: 5px;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.member img:hover {
+    transform: rotate(360deg);
+}
+
+.name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.role {
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
